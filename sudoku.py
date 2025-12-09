@@ -33,7 +33,7 @@ def generate_Sudoku(data: list) -> bool:
                 random.shuffle(nums)
                 for n in nums:
                     if validation(data, n, row, col):
-                        data[row][col] = n
+                        data[row][col] = n  
                         if generate_Sudoku(data):
                             return True
                         data[row][col] = None
@@ -133,7 +133,7 @@ def grid_set_up(data: list):
     or_fg = [[None]*9 for _ in range(9)]
     or_st = [[None]*9 for _ in range(9)]
     entries = [[None]*9 for _ in range(9)]
-    font = ('Chewy', 15)
+    font = ('Chewy', 50)
     for row in range(9):
         for col in range(9):
             color_bg = "lightgrey" if (row//3 + col//3)%2 == 0 else "white"
